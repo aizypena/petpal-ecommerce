@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import useDocumentTitle from "../hooks/useDocumentTitle";
+import useDocumentTitle from "../shared/useDocumentTitle";
 
 export const Home = () => {
   //setting dynamic title
