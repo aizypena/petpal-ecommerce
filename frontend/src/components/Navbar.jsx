@@ -111,11 +111,19 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 relative lg:after:absolute lg:after:bg-black lg:after:w-full lg:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">
+                <Link
+                  to={"/"}
+                  className="text-black block text-[15px] font-medium"
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">
                 <a
                   href="#"
                   className="text-black block text-[15px] font-medium"
                 >
-                  Shopping
+                  Shop
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">
@@ -123,7 +131,7 @@ export default function Navbar() {
                   href="#"
                   className="text-black block text-[15px] font-medium"
                 >
-                  Tracking
+                  About
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">
@@ -131,15 +139,7 @@ export default function Navbar() {
                   href="#"
                   className="text-black block text-[15px] font-medium"
                 >
-                  Support
-                </a>
-              </li>
-              <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">
-                <a
-                  href="#"
-                  className="text-black block text-[15px] font-medium"
-                >
-                  Account
+                  Services
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">

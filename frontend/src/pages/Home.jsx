@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import useDocumentTitle from "../shared/useDocumentTitle";
+import HomeCarousel from "../components/HomeCarousel";
 
 export const Home = () => {
   //setting dynamic title
@@ -8,7 +9,10 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="home-main-container"></div>
+      <HomeCarousel />
+      <div className="home-main-container">
+        <section className="popular-brands-container"></section>
+      </div>
     </>
   );
 };
