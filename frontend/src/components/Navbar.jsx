@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="min-h-[60px] tracking-wide relative z-50 font-mono">
+      <header className="min-h-[60px] fixed top-0 left-0 right-0 tracking-wide z-50 font-mono">
         {/* Top Bar */}
         <section className="bg-[#005CB9] min-h-[40px] px-4 py-2 sm:px-10 flex items-center max-sm:flex-col">
           <button type="button" className="text-white text-sm">

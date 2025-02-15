@@ -1,40 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useDocumentTitle from "../shared/useDocumentTitle";
 import axios from "axios";
 
 export const SignUp = () => {
   // dynamic title
-  useDocumentTitle("PetPal - Sign Up");
+  useDocumentTitle("Sign Up | PetPal");
 
-  // state for form inputs
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    cpassword: "",
-  });
+  // useForm hook from react-hook-form
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
-  // handle input change
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  // Watch password and confirm password fields
+  const password = watch("password", "");
 
   // handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (formData.password !== formData.cpassword) {
-      alert("Passwords do not match");
-      return;
-    }
-
+  const onSubmit = async (data) => {
     try {
       const response = await axios.post("http://localhost:5000/api/users", {
-        email: formData.email,
-        password: formData.password,
+        email: data.email,
+        password: data.password,
       });
       console.log(response.data);
       alert("Account created successfully");
@@ -60,7 +50,7 @@ export const SignUp = () => {
           </Link>
         </div>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="space-y-6">
             <div>
               <label className="text-gray-800 text-sm mb-2 block">
@@ -69,11 +59,15 @@ export const SignUp = () => {
               <input
                 name="email"
                 type="text"
-                value={formData.email}
-                onChange={handleChange}
+                {...register("email", { required: "Email is required" })}
                 className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 placeholder="Enter email"
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
             <div>
               <label className="text-gray-800 text-sm mb-2 block">
@@ -82,11 +76,15 @@ export const SignUp = () => {
               <input
                 name="password"
                 type="password"
-                value={formData.password}
-                onChange={handleChange}
+                {...register("password", { required: "Password is required" })}
                 className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 placeholder="Enter password"
               />
+              {errors.password && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.password.message}
+                </p>
+              )}
             </div>
             <div>
               <label className="text-gray-800 text-sm mb-2 block">
@@ -95,11 +93,19 @@ export const SignUp = () => {
               <input
                 name="cpassword"
                 type="password"
-                value={formData.cpassword}
-                onChange={handleChange}
+                {...register("cpassword", {
+                  required: "Confirm Password is required",
+                  validate: (value) =>
+                    value === password || "Passwords do not match",
+                })}
                 className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 placeholder="Enter confirm password"
               />
+              {errors.cpassword && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.cpassword.message}
+                </p>
+              )}
             </div>
 
             <div className="flex items-center">
@@ -107,6 +113,9 @@ export const SignUp = () => {
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
+                {...register("rememberMe", {
+                  required: "You must accept the terms and conditions",
+                })}
                 className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
               />
               <label
@@ -114,13 +123,18 @@ export const SignUp = () => {
                 className="text-gray-800 ml-3 block text-sm"
               >
                 I accept the{" "}
-                <a
-                  href="javascript:void(0);"
+                <Link
+                  to="/terms-conditions"
                   className="text-blue-600 font-semibold hover:underline ml-1"
                 >
                   Terms and Conditions
-                </a>
+                </Link>
               </label>
+              {errors.rememberMe && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.rememberMe.message}
+                </p>
+              )}
             </div>
           </div>
 
@@ -135,7 +149,7 @@ export const SignUp = () => {
           <p className="text-gray-800 text-sm mt-6 text-center">
             Already have an account?{" "}
             <Link
-              to={"/login"}
+              to="/login"
               className="text-blue-600 font-semibold hover:underline ml-1"
             >
               Login here

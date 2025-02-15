@@ -8,9 +8,9 @@ export const Home = () => {
 
   return (
     <>
-      <Navbar />
-      <HomeCarousel />
-      <div className="home-main-container">
+      <div className="home-main-container py-31">
+        <Navbar />
+        <HomeCarousel />
         <section className="popular-brands-container"></section>
       </div>
     </>
