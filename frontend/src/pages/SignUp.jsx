@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useDocumentTitle from "../shared/useDocumentTitle";
@@ -16,6 +16,9 @@ export const SignUp = () => {
     formState: { errors },
   } = useForm();
 
+  // State for server error message
+  const [serverError, setServerError] = useState("");
+
   // Watch password and confirm password fields
   const password = watch("password", "");
 
@@ -28,11 +31,12 @@ export const SignUp = () => {
       });
       console.log(response.data);
       alert("Account created successfully");
+      setServerError(""); // Clear server error on successful submission
     } catch (error) {
       console.error("Error creating account:", error);
-      alert(
-        "Error creating account: " +
-          (error.response?.data?.message || error.message)
+      setServerError(
+        error.response?.data?.message ||
+          "Error creating account. Please try again."
       );
     }
   };
@@ -54,7 +58,7 @@ export const SignUp = () => {
           <div className="space-y-6">
             <div>
               <label className="text-gray-800 text-sm mb-2 block">
-                Email Id
+                Email Address
               </label>
               <input
                 name="email"
@@ -67,6 +71,9 @@ export const SignUp = () => {
                 <p className="text-red-500 text-sm mt-1">
                   {errors.email.message}
                 </p>
+              )}
+              {serverError && (
+                <p className="text-red-500 text-sm mt-1">{serverError}</p>
               )}
             </div>
             <div>
@@ -141,7 +148,7 @@ export const SignUp = () => {
           <div className="!mt-8">
             <button
               type="submit"
-              className="w-full py-3 px-4 text-sm tracking-wider font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+              className="w-full py-3 px-4 text-sm tracking-wider font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer"
             >
               Create an account
             </button>

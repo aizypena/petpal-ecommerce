@@ -1,4 +1,3 @@
-// filepath: backend/src/controllers/userController.js
 const User = require("../models/user");
 
 // Create a new user
@@ -11,7 +10,12 @@ const createUser = async (req, res) => {
     res.status(201).json(user);
   } catch (error) {
     console.error(error);
-    res.status(400).json({ message: error.message });
+    if (error.code === 11000) {
+      // Duplicate key error
+      res.status(400).json({ message: "Email already exists." });
+    } else {
+      res.status(400).json({ message: error.message });
+    }
   }
 };
 

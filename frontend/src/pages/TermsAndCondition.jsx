@@ -79,6 +79,79 @@ export const TermsAndCondition = () => {
               <p className="font-bold underline pb-2">
                 Registration and Account Security
               </p>
+              <p>
+                To access and use the Platform, you are required to register and
+                create an account. However, we have the absolute discretion to
+                refuse your registration and/or to terminate the same for any
+                reason whatsoever at any time with or without notice.
+              </p>
+              <p>Upon registration:</p>
+              <ol className="list-decimal pl-10">
+                <li>
+                  You must provide us with accurate, complete and up to date
+                  registration information.
+                </li>
+                <li>
+                  We are authorized to assume that any person using the Platform
+                  with your username and password is either you yourself or is
+                  authorized to act in your behalf.
+                </li>
+              </ol>
+              <p>
+                You are responsible for safeguarding your username and password
+                that you use to access the Platform and for any activities or
+                actions under your password. You shall be liable for every order
+                made under your login and as such, agree to indemnify us for all
+                claims, losses, damages whatsoever arising from the actions of a
+                person in connection with the access and use of the Platform
+                using your login details.
+              </p>
+              <p>
+                At any time, we may request you to update your username and/or
+                password. We shall not be liable or responsible for any losses
+                suffered by you arising out of or in connection with or by
+                reason of such request or due to any invalidation in username or
+                password, regardless of cause.
+              </p>
+              <p>
+                We may, at any time, change the price and other specifications
+                of the Products.
+              </p>
+            </div>
+            <div className="content-4 pt-10">
+              <p className="font-bold underline pb-2">Placing Order</p>
+              <p>
+                You may place your order by clicking the “Buy now” or “Add to my
+                cart/bag” or other similar button, and proceeding to the check
+                out page. By clicking the “Buy now” or “Add to my cart/bag”
+                button or “Check out” or similar button, you are effectively
+                submitting your offer to buy a particular Product, which we may
+                accept or reject. You shall be responsible for ensuring the
+                completeness and accuracy of the information provided for the
+                order placed.
+              </p>
+            </div>
+            <div className="content-5 pt-10">
+              <p className="font-bold underline pb-2">
+                Restrictions, Limitations or Conditions of Purchase
+              </p>
+              <p>
+                We may, without prior notice, limit the quantities sold in the
+                Platform, cancel any order at any time, and/or refuse service to
+                any customer. We will notify you through the email address or
+                contact number you provided for any cancellation or change
+                status in your order. We may also require verification of
+                information prior to the acceptance and/or shipment of any
+                order.
+              </p>
+            </div>
+            <div className="content-6 pt-10">
+              <p className="font-bold underline pb-2">Payment</p>
+              <p>
+                All prices indicated in the Platform are in Philippine Peso.
+                When an order is placed in the Platform, you have the following
+                payment options:
+              </p>
             </div>
           </div>
         </section>
