@@ -119,12 +119,12 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">
-                <a
-                  href="#"
+                <Link
+                  to={"/shop"}
                   className="text-black block text-[15px] font-medium"
                 >
                   Shop
-                </a>
+                </Link>
               </li>
               <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">
                 <a
@@ -147,7 +147,7 @@ export default function Navbar() {
                   href="#"
                   className="text-black block text-[15px] font-medium"
                 >
-                  Places
+                  Branches
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-black lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300">

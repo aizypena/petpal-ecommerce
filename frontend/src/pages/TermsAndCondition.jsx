@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
 import useDocumentTitle from "../shared/useDocumentTitle";
+import { Footer } from "../components/Footer";
+import footerItems from "../shared/footerItems";
 
 export const TermsAndCondition = () => {
   // dynamic title
@@ -156,6 +158,7 @@ export const TermsAndCondition = () => {
           </div>
         </section>
       </div>
+      <Footer footerItems={footerItems} />
     </>
   );
 };

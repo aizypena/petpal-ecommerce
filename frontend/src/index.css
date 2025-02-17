@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-petPalBlue: oklch(48.55% 0.164498 255.7938);
+  --color-petPalYellow-light: oklch(85.36% 0.1745 87.53);
+  --color-petPalYellow-dark: oklch(77.77% 0.1589 89.28);
+}
