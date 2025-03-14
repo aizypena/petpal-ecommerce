@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import useDocumentTitle from "../shared/useDocumentTitle";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 import footerItems from "../shared/footerItems";
 
 export const TermsAndCondition = () => {
