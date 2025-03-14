@@ -126,18 +126,20 @@ export default function Navbar() {
           </div>
 
           {/* Cart Icon */}
-          <div className="flex items-center max-sm:ml-auto">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 576 512"
-              className="cursor-pointer fill-black"
-            >
-              <path d="M528.12 301.319l47.273-208C578.611 77.197 566.872 64 552 64H128L121.1 34.746A32 32 0 0 0 90.746 8.001H24A24 24 0 0 0 0 32c0 13.255 10.745 24 24 24h52.746l70.254 312a64 64 0 1 0 77.654 8h166.692a64 64 0 1 0 70.746-32l8.585-37.6a32 32 0 0 0-32.321-37.081H195.515l-8.585-38.172H520a32 32 0 0 0 31.242-24.828zM208 448a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm224 0a32 32 0 1 1 32-32 32 32 0 0 1-32 32z" />
-            </svg>
-          </div>
+          <Link to={"/cart"}>
+            <div className="flex items-center max-sm:ml-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 576 512"
+                className="cursor-pointer fill-black"
+              >
+                <path d="M528.12 301.319l47.273-208C578.611 77.197 566.872 64 552 64H128L121.1 34.746A32 32 0 0 0 90.746 8.001H24A24 24 0 0 0 0 32c0 13.255 10.745 24 24 24h52.746l70.254 312a64 64 0 1 0 77.654 8h166.692a64 64 0 1 0 70.746-32l8.585-37.6a32 32 0 0 0-32.321-37.081H195.515l-8.585-38.172H520a32 32 0 0 0 31.242-24.828zM208 448a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm224 0a32 32 0 1 1 32-32 32 32 0 0 1-32 32z" />
+              </svg>
+            </div>
+          </Link>
 
           {/* Hamburger Icon */}
           <button onClick={toggleMobileMenu} className="lg:hidden ml-6">

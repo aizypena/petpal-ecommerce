@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <Navbar />
-      <section className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-20 min-h-[80vh]">
+      <section className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-20 min-h-[80vh] font-mono">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8">

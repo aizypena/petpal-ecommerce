@@ -5,7 +5,7 @@ function Services() {
   return (
     <>
       <Navbar />
-      <main className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-20">
+      <main className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-20 font-mono">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8">

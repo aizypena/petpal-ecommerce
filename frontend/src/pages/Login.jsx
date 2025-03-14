@@ -98,12 +98,9 @@ export const Login = () => {
                   </label>
                 </div>
                 <div className="text-sm">
-                  <a
-                    href="javascript:void(0);"
-                    className="text-blue-600 hover:underline font-semibold"
-                  >
+                  <span className="text-blue-600 hover:underline font-semibold cursor-pointer">
                     Forgot your password?
-                  </a>
+                  </span>
                 </div>
               </div>
 

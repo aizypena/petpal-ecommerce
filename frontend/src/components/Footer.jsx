@@ -16,8 +16,10 @@ export default function Footer() {
                   index === 2 ? "w-full md:w-auto" : ""
                 }`}
               >
-                {/* Rendering inline SVG directly */}
-                <div className="mb-2">{item.imgSrc}</div>
+                {/* Rendering image using img tag */}
+                <div className="mb-2">
+                  <img src={item.imgSrc} alt={item.altText} />
+                </div>
                 <p>{item.text}</p>
               </div>
             ))}
@@ -38,9 +40,8 @@ export default function Footer() {
             </div>
           </section>
 
-          {/* Section 3 (Optional future content) */}
-          <section className="footer-section-3 mt-4 bg-petPalYellow-dark">
-            {/* You can add additional footer content here */}
+          <section className="w-full bg-petPalYellow-light text-white footer-section-3 text-center font-mono py-4">
+            © 2025 PetPal. All Rights Reserved.
           </section>
         </div>
       </footer>

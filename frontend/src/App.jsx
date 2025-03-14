@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Branches from "./pages/Branches.jsx";
 import Contact from "./pages/Contact";
 import About from "./pages/About.jsx";
+import Cart from "./pages/Cart.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/branches" element={<Branches />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
   );
