@@ -7,35 +7,40 @@ export default function Footer() {
     <>
       <footer className="w-full text-white m-0 p-0">
         <div className="w-full">
-          {/* section 1 */}
+          {/* Section 1 */}
           <section className="flex flex-wrap justify-between items-center mx-auto py-4 md:py-8 px-4 md:px-16 lg:px-32 xl:px-72 bg-petPalBlue">
             {footerItems.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center ${
+                className={`flex flex-col items-center text-center ${
                   index === 2 ? "w-full md:w-auto" : ""
                 }`}
               >
-                <img src={item.imgSrc} alt={item.altText} className="mb-2" />
+                {/* Rendering inline SVG directly */}
+                <div className="mb-2">{item.imgSrc}</div>
                 <p>{item.text}</p>
               </div>
             ))}
           </section>
 
-          {/* section 2 */}
+          {/* Section 2 - Logo Section */}
           <section className="w-full bg-petPalYellow-light text-white footer-section-2">
             <div className="w-full">
               <div className="logo-container flex justify-center items-center py-10">
                 <Link to="/">
-                  <img src="PetPalNavPic.png" alt="PetPal Logo" />
+                  <img
+                    src="PetPalNavPic.png"
+                    alt="PetPal Logo"
+                    className="w-40"
+                  />
                 </Link>
               </div>
             </div>
           </section>
 
-          {/* section 3 */}
+          {/* Section 3 (Optional future content) */}
           <section className="footer-section-3 mt-4 bg-petPalYellow-dark">
-            {/* Add content for section 3 */}
+            {/* You can add additional footer content here */}
           </section>
         </div>
       </footer>
