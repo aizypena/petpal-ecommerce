@@ -1,8 +1,9 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import useDocumentTitle from "../shared/useDocumentTitle";
 
 export default function Cart() {
-  // Sample cart items (static for now, but can be dynamic)
+  useDocumentTitle("PetPal - Cart");
   const cartItems = [
     {
       id: 1,

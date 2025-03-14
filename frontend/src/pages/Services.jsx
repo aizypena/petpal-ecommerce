@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import useDocumentTitle from "../shared/useDocumentTitle";
 
 function Services() {
+  useDocumentTitle("PetPal - Services");
   return (
     <>
       <Navbar />

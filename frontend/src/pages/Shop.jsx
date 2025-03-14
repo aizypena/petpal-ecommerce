@@ -1,8 +1,10 @@
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import { items } from "./shop.js";
+import useDocumentTitle from "../shared/useDocumentTitle.js";
 
 export const Shop = () => {
+  useDocumentTitle("PetPal - Shop");
   return (
     <>
       <div className="shop-main-container min-h-screen flex flex-col">

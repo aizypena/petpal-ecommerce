@@ -6,7 +6,7 @@ import popularBrandsPic from "../shared/popularBrands"; // Fixed named import
 import Footer from "../components/Footer";
 
 export const Home = () => {
-  useDocumentTitle("PetPal");
+  useDocumentTitle("PetPal - Home");
 
   return (
     <>

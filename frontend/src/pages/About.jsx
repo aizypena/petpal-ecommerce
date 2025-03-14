@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import useDocumentTitle from "../shared/useDocumentTitle";
 
 function About() {
+  useDocumentTitle("PetPal - About Us");
   return (
     <>
       <Navbar />
