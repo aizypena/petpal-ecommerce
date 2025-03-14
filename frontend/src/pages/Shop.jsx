@@ -31,7 +31,7 @@ export const Shop = () => {
                     </h3>
                     <p className="text-gray-600 mt-1">{item.price}</p>
                   </div>
-                  <button className="mt-4 w-full hover:cursor-pointer bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                  <button className="mt-4 w-full hover:cursor-pointer bg-petPalBlue text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
                     Add to Cart
                   </button>
                 </div>
